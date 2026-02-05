@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmed!</title>
+    <style>
+        body, html { height: 100%; margin: 0; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Background Image Logic */
+        .bg-img {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                              url('https://images.unsplash.com/photo-1544124499-58912cbddaad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; color: #fff; }
+        p { font-size: 1.2rem; margin-bottom: 30px; color: #f0f0f0; }
+        
+        .btn-home {
+            background: #008080;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-home:hover { background: #005f5f; box-shadow: 0 5px 15px rgba(0,128,128,0.4); }
+    </style>
+</head>
+<body>
+
+<div class="bg-img">
+    <div class="message-box">
+        <div style="font-size: 60px;">🏝️</div>
+        <h1>Your Stay is Confirmed!</h1>
+        <p>Pack your bags! Your dream vacation in Maldives starts soon.<br>
+           We have sent the booking details to your contact number.</p>
+        <a href="/rooms/" class="btn-home">Back to Rooms</a>
+    </div>
+</div>
+
+</body>
+</html>

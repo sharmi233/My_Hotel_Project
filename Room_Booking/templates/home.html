@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Maldives</title>
+    <style>
+        /* 1. Mukkkiyamaana fix: html and body full-ah irukanum */
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+            padding: 0;
+            font-family: sans-serif; 
+            overflow: hidden; /* Scroll varaama irukka */
+        }
+
+        /* 2. Hero image full screen-ku indha height thaan correct */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            url("https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1600");
+            
+            height: 100vh; /* Viewport Height: Browser screen full-ah edukkum */
+            width: 100%;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; /* Image-ah stretch aagama cover pannum */
+            
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav { 
+            background: rgba(0, 128, 128, 0.8); 
+            padding: 15px 0; 
+            position: absolute; /* Fixed-ku badhila Absolute podunga overlap aagaadhu */
+            width: 100%; 
+            top: 0; 
+            display: flex; 
+            justify-content: center; 
+            gap: 40px; 
+            z-index: 1000; 
+        }
+
+        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
+        
+        .btn-rooms { 
+            background: #ff4500; 
+            color: white; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">HOME</a>
+        <a href="/rooms/">ROOMS</a>
+        <a href="/admin/">STAFF LOGIN</a>
+    </nav>
+
+    <div class="hero-image">
+        <h1 style="font-size: 60px; margin: 0;">Maldives Luxury Resort</h1>
+        <p style="font-size: 24px;">Escape to Paradise with our exclusive water villas.</p>
+        <a href="/rooms/" class="btn-rooms">Explore Rooms</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Form</title>
+    <style>
+        body { font-family: sans-serif; background: #e0f2f1; display: flex; justify-content: center; padding: 50px; }
+        .form-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); width: 400px; }
+        h2 { color: #00796b; }
+        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #00796b; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #004d40; }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Book Room: {{ room.room_number }}</h2>
+        <p>Category: {{ room.get_category_display }}</p>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="contact" placeholder="Contact Number" required>
+            <label>Check-in Date:</label>
+            <input type="date" name="check_in" required>
+            <label>Check-out Date:</label>
+            <input type="date" name="check_out" required>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</body>
+</html>
