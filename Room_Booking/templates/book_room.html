@@ -2,13 +2,19 @@
 <html>
 <head>
     <title>Booking Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: sans-serif; background: #e0f2f1; display: flex; justify-content: center; padding: 50px; }
-        .form-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); width: 400px; }
+        body { font-family: sans-serif; background: #e0f2f1; display: flex; justify-content: center; padding: 50px 20px; }
+        .form-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); width: 100%; max-width: 400px; }
         h2 { color: #00796b; }
         input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
         button { width: 100%; padding: 12px; background: #00796b; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
         button:hover { background: #004d40; }
+
+        @media (max-width: 480px) {
+            body { padding: 20px 15px; }
+            .form-box { padding: 20px; }
+        }
     </style>
 </head>
 <body>
