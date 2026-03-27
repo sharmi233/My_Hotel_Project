@@ -2,9 +2,12 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 SECRET_KEY = 'django-insecure-kl5nedn-6)ts)qo3)#1#_ebjbg%b$8k#jl5wa#1y=dt&)sgwdf'
+
 DEBUG = True
-ALLOWED_HOSTS = ['*'] # Ellathaiyum allow panna '*' kuduthuruken
+
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -13,15 +16,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    # Puthiya Settings
-    'rest_framework',    
-    'corsheaders',       
-    'Room_Booking',      
+    'rest_framework',
+    'corsheaders',
+    'Room_Booking',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # Top-la irukanum
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -43,7 +44,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', 
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -51,8 +52,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Maldives_Project.wsgi.application'
 
-# --- SQLITE DATABASE SETTINGS (CHANGED FROM MYSQL) ---
-# Idhu MariaDB version check-ah skip pannidum
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -71,7 +70,6 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-# Error varaama irukka indha check add panniruken
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] if os.path.exists(os.path.join(BASE_DIR, 'static')) else []
 
 MEDIA_URL = '/media/'
